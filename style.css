@@ -12,6 +12,7 @@
   --abu-putih: #edf0f2;
   --yellow: #f4b350;
 }
+
 /* HEADER */
 .navigasi {
   background-color: var(--abu-tua);
@@ -19,6 +20,9 @@
   grid-template-columns: 0.6fr 1.4fr;
   gap: 40px;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .brand {
@@ -26,7 +30,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 18px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 .brand span {
@@ -37,20 +41,20 @@
   padding-left: 3px;
 }
 nav {
-  padding: 27px;
+  padding: 20px;
 }
 nav ul {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  padding-right: 10px;
+  padding-right: 2px;
 }
 nav ul li a {
   position: relative;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  padding: 2px 30px;
+  padding: 2px 25px;
   display: inline-block;
 }
 nav ul li a::after {
@@ -76,7 +80,7 @@ nav ul li a:hover::after {
 .hero {
   display: grid;
   grid-template-areas: "sosmed gambar text";
-  grid-template-columns: 0.2fr 1.1fr 1fr;
+  grid-template-columns: 0.2fr 1.1fr 1.2fr;
   background-color: var(--abu-tua);
   gap: 5px;
   height: 100vh;
@@ -84,7 +88,8 @@ nav ul li a:hover::after {
   align-items: center;      /* ✅ ini yang penting, ubah dari align-content */
   justify-items: center;
   position: relative;       /* untuk hero-sosmed absolute */
-  overflow: hidden;         /* biar tidak ada elemen keluar */
+  overflow: hidden; 
+  padding-top: 50px;        /* biar tidak ada elemen keluar */
 }
 
 /* Sosmed tetap di bawah */
@@ -95,7 +100,7 @@ nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
 }
 
 .hero-sosmed i {
@@ -111,6 +116,7 @@ nav ul li a:hover::after {
   display: block;
   width: 3px;
   height: 150px;
+  margin-bottom: -17px;
   background-color: #f4b350;
   margin-top: 5px;
 }
@@ -140,7 +146,7 @@ nav ul li a:hover::after {
 }
 
 .hero-text h4 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   display: flex;
   align-items: center;
   font-weight: 400;
@@ -157,7 +163,7 @@ nav ul li a:hover::after {
   border-radius: 2px;   /* ujung garis agak halus */
 }
 .hero-text h1 {
-  font-size: 2.9rem;
+  font-size: 3rem;
   font-weight: 400;
   color: #f4b350;
 }
@@ -165,7 +171,7 @@ nav ul li a:hover::after {
   font-size: 5.5rem;
 }
 .hero-text h3{
-  font-size: 3.1rem;
+  font-size: 3.3rem;
   font-weight: 750;
 }
 .hero-button{
@@ -174,19 +180,25 @@ nav ul li a:hover::after {
   padding-top: 50px;
 }
 .hero-button button {
-  padding: 9px 15px;
-  color: var(--abu-putih);
-  background-color: var(--abu-muda);
-  border-radius: 10px;
+  padding: 7px 13px;
+  background-color: var(--abu-tua);
+  border-radius:6px;
   border: none;
   cursor: pointer;
   font-weight: 600;
   font-size: 0.7rem;
   border: 1px solid var(--abu-putih);
 }
+.hero-button button a{
+  text-decoration: none;
+  color: inherit;
+}
+.hero-button button:hover a{
+  color: black;
+}
 .hero-button button:hover{
+  color: black;
   background-color: var(--yellow);
-  color: var(--abu-tua);
 }
 
 /* ABOUT ME */
@@ -204,6 +216,7 @@ nav ul li a:hover::after {
 .about-me p {
   width: 95%;
   font-size: 0.9rem;
+  font-weight: 350;
   line-height: 35px;
   text-align: center;
   padding-top: 40px;
@@ -214,19 +227,19 @@ nav ul li a:hover::after {
   display: inline-block;
   padding-bottom: 40px;
 }
-.text-back {
+.about-heading .text-back{
   color: #444444; /* Hitam tua */
-  font-size: 2rem;
+  font-size: 4.9rem;
   font-weight: 1000;
 }
-.text-front {
+.about-heading .text-front {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 1.8rem;
+  font-size: 4.2rem;
   font-weight: 800;
   color: rgb(188, 186, 186);
-  transform: translate(22px, 40px); /* Geser sedikit */
+  transform: translate(19px, 30px); /* Geser sedikit */
 }
 .tab-container {
   background: #f8f8f8;
@@ -246,7 +259,7 @@ nav ul li a:hover::after {
 .tab {
   background: #ddd;
   border: none;
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   color: #444444;
   padding: 13px 30px;
   margin: 0 15px;
@@ -263,7 +276,7 @@ nav ul li a:hover::after {
 .tab.active {
   background: #444;
   color: #f4b350;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .tab-content {
@@ -293,7 +306,7 @@ nav ul li a:hover::after {
   align-items: center;
 }
 .about-gallery img {
-  width: 200px;
+  width: 300px;
   height: auto;
   margin: 15px;
   border-radius: 10px;
@@ -301,7 +314,7 @@ nav ul li a:hover::after {
 .tab-content ul li {
   color: #000; /* bullet list hitam */
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .tab-content.active {
   display: block;
@@ -335,13 +348,13 @@ nav ul li a:hover::after {
 
 .content h3 {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin-bottom: 2px;
   padding-top: 17px;
   margin-left: -20px;
 }
 .content p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #333;
   margin-top: -8px;
 }
@@ -369,25 +382,26 @@ nav ul li a:hover::after {
 .skills-heading {
   position: relative;
   display: inline-block;
+  margin-top: 50px;
   padding-bottom: 40px;
   text-align: center;
   padding-bottom: 70px;
 }
 
-.text-back {
+.skills-heading .text-back {
   color: #444444;
-  font-size: 6.5rem;
+  font-size: 4.9rem;
   font-weight: 1000;
 }
 
-.text-front {
+.skills-heading .text-front {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 5.5rem;
+  font-size: 4.2rem;
   font-weight: 800;
   color: rgb(188, 186, 186);
-  transform: translate(22px, 40px);
+  transform: translate(19px, 30px);
 }
 
 /* ====== ANIMASI SLIDER ====== */
@@ -448,24 +462,24 @@ nav ul li a:hover::after {
 .projects-heading {
   position: relative;
   display: inline-block;
-  padding-bottom: 40px;
+  padding-bottom: 110px;
   text-align: center;
 }
 
-.text-back {
+.projects-heading .text-back {
   color: #444444;
-  font-size: 6.5rem;
+  font-size: 4.9rem;
   font-weight: 1000;
 }
 
-.text-front {
+.projects-heading .text-front {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 5.5rem;
+  font-size: 4.2rem;
   font-weight: 800;
   color: rgb(188, 186, 186);
-  transform: translate(22px, 40px);
+  transform: translate(26px, 30px);
 }
 .projects-detail{
   display: grid;
@@ -477,8 +491,11 @@ nav ul li a:hover::after {
   align-items: center;
 }
 .detail{
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-color:#326381;
+  background-color:#e5e9eb;
+  min-height: 520px;
 }
 .detail img{
   width: 100%;
@@ -487,19 +504,44 @@ nav ul li a:hover::after {
 .detail h3{
   padding-left: 15px;
   margin-top: 25px;
-  font-weight: 650;
-  font-size: 1.2rem;
+  font-weight: 590;
+  font-size: 15px;
+  color: #000;
 }
 .detail p{
   padding-left: 15px;
   margin-top: 10px;
-  color: #bdbdbd;
+  color: #494747;
+  font-size: 12px;
+  padding-right: 12px;
 }
-.detail button{
-  padding: 10px;
+.tech{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding-left: 15px;
+}
+.tech p{
+  padding: 3px 8px;
+  background-color: #d6d3d3;
+  border-radius: 10px;
+  color: var(--abu-tua);
+}
+.button-project{
+  margin-top: auto;
+}
+.button-project button{
+  padding: 8px;
   margin: 20px;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #000;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.button-project button:hover{
+  background-color: var(--yellow);
+  cursor: pointer;
+  font-weight: 650;
 }
 /* CERTIFICATES */
 .certificates {
@@ -516,25 +558,26 @@ nav ul li a:hover::after {
 .certificates-heading {
   position: relative;
   display: inline-block;
-  padding-bottom: 40px;
   text-align: center;
   padding-bottom: 70px;
+  margin-top: 45px;
+
 }
 
-.text-back {
+.certificates-heading .text-back {
   color: #444444;
-  font-size: 6.5rem;
+  font-size: 4.6rem;
   font-weight: 1000;
 }
 
-.text-front {
+.certificates-heading .text-front {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 5.5rem;
+  font-size: 4.1rem;
   font-weight: 800;
   color: rgb(188, 186, 186);
-  transform: translate(22px, 40px);
+  transform: translate(30px, 25px);
 }
 .certificates-item{
   display: grid;
@@ -546,23 +589,42 @@ nav ul li a:hover::after {
 .detail-item{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 5px;
   gap: 20px;
   width: 100%;
+  border: 1px solid var(--abu-muda);
+  border-radius: 5px;
 }
-.detail-item:hover{
-    border: 1px solid blue;
+.item-detail{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.item-detail p{
+  font-size: 0.7rem;
+}
+.item-detail h3{
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 500;
 
 }
+.item-detail h1{
+  font-size: 1rem;
+}
+
 .item-gambar{
   width: 100%;
 }
 .item-gambar img{
-  max-width: 300px;
+  max-width: 270px;
   height: auto;
 }
-.item-detail h3{
-  font-style: italic;
+.detail-item:hover h1{
+  color: var(--yellow);
 }
+
 
 
 /* CONTACT */
@@ -574,14 +636,36 @@ nav ul li a:hover::after {
   padding: 10px;
   background-color: var(--abu-tua);
   width: 100%;
-  padding-top: 100px;
+  padding-top: 10px;
 }
 .contact-heading {
   position: relative;
   display: inline-block;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   text-align: center;
-  padding-bottom: 70px;
+}
+
+
+.contact-heading .text-back {
+  color: #444444;
+  font-size: 4.9rem;
+  font-weight: 1000;
+}
+
+.contact-heading .text-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 4.1rem;
+  font-weight: 800;
+  color: rgb(188, 186, 186);
+  transform: translate(32px, 30px);
+}
+.contact-text {
+  font-size: 0.9rem;
+  padding: 0px 150px;
+  text-align: center;
+  padding-bottom: 30px;
 }
 .contact-container {
   display: grid;
@@ -589,6 +673,7 @@ nav ul li a:hover::after {
   gap: 1rem;
   max-width: 700px;
   margin: 50px auto;
+  margin-bottom: 110px;
 }
 
 .contact-card {
@@ -601,11 +686,16 @@ nav ul li a:hover::after {
   align-items: center; /* tengah vertikal */
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .contact-card:hover {
-  background-color: #21262d;
-  border-color: #58a6ff;
+  background-color: #464444;
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+.contact-card:hover span{
+  color: var(--yellow);
 }
 
 /* Kiri: ikon + teks */
@@ -630,13 +720,33 @@ nav ul li a:hover::after {
 /* Kanan: panah */
 .arrow {
   text-decoration: none;
-  color: #58a6ff;
+  color: var(--yellow);
   font-size: 1.1rem;
   transition: transform 0.2s ease;
 }
 
 .contact-card:hover .arrow {
   transform: translateX(3px);
+}
+
+.contact-left i.fa-brands.fa-square-whatsapp{
+  color: #25D366;
+}
+.contact-left i.fa-solid.fa-envelope{
+  color: #EA4335;
+}
+.contact-left i.fa-brands.fa-instagram{
+  color: #DD2A7B;
+}
+
+footer{
+  background-color: #dfdede;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.8rem;
+}
+footer p{
+  color: var(--abu-tua);
 }
 
 
